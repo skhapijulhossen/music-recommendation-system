@@ -13,11 +13,14 @@ class getAudioFeatureService:
         self.track_ids = track_ids
 
     def run(self, access_token: str) -> list:
+        io = IO()
+        ids = '%2C'.join([ row[0] for row in io.read(self.track_ids) ])
+        
         try:
             return os.system(
-                'curl -X "GET" "https://api.spotify.com/v1/audio-features?ids=56zZ48jdyY2oDXHVnwg5Di%2C56zZ48jdyY2oDXHVnwg5Di"\
+                'curl -X "GET" "https://api.spotify.com/v1/audio-features?ids={1}"\
                      -H "Accept: application/json" -H "Content-Type: application/json"\
-                         -H "Authorization: Bearer {0}"'.format(access_token)
+                         -H "Authorization: Bearer {0}"'.format(access_token, ids)
             )
         except Exception as e:
             return e
