@@ -2,6 +2,7 @@ import os
 import sys
 from pprint import pprint
 from write_to_orc import IO
+import json
 
 
 class getAudioFeatureService:
@@ -17,11 +18,12 @@ class getAudioFeatureService:
         ids = '%2C'.join([ row[0] for row in io.read(self.track_ids) ])
         
         try:
-            return os.system(
+            response = os.system(
                 'curl -X "GET" "https://api.spotify.com/v1/audio-features?ids={1}"\
                      -H "Accept: application/json" -H "Content-Type: application/json"\
                          -H "Authorization: Bearer {0}"'.format(access_token, ids)
             )
+            #json.dump(
         except Exception as e:
             return e
 
@@ -35,6 +37,5 @@ if __name__ == '__main__':
     kwargs = { arg.split('=')[0]:arg.split('=')[1] for arg in sys.argv[1:] }
     service = getAudioFeatureService(track_ids=kwargs['track_ids'])
     data = service.run(access_token=kwargs['access_token'])    
-    pprint(data)
-    
+    pprint('\n', data)
 
