@@ -1,8 +1,7 @@
-import os
 import sys
 from pprint import pprint
-from write_to_orc import IO
-import json
+from orcIO import IO
+import requests
 
 
 class getAudioFeatureService:
@@ -15,15 +14,21 @@ class getAudioFeatureService:
 
     def run(self, access_token: str) -> list:
         io = IO()
-        ids = '%2C'.join([ row[0] for row in io.read(self.track_ids) ])
-        
+        ids = '%2C'.join([row[0] for row in io.read(self.track_ids)])
+
         try:
-            response = os.system(
-                'curl -X "GET" "https://api.spotify.com/v1/audio-features?ids={1}"\
-                     -H "Accept: application/json" -H "Content-Type: application/json"\
-                         -H "Authorization: Bearer {0}"'.format(access_token, ids)
+            url = f'https://api.spotify.com/v1/audio-features?ids={ids}'
+            headers = {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "Authorization": f'Bearer {access_token}'
+            }
+            response = requests.get(
+                url=url,
+                headers=headers
             )
-            #json.dump(
+            if response.ok:
+                return response.json()['audio_features']
         except Exception as e:
             return e
 
@@ -34,8 +39,15 @@ if __name__ == '__main__':
     Example : python get_audio_features.py track_ids=./track_ids.orc store=./track_features.orc access_token=BQBaeCzbfTIY0npFsW3c36WYznmXab0ChptOEC1pKczRTkWIg3-hCmSmqVxUx3ZK4NgKtA6Z88U9ie2yPHjmOpIf9rJ21YJ75j9N9nxO9yEnZtc-JEt2YWZSVqZyRyocsOBnUtclVykxwoAereqVlUH3ZvwXtGSEWR6o5ZGmCC7Z485h2W1_iqYAMwFY8qCxlss
 
     """
-    kwargs = { arg.split('=')[0]:arg.split('=')[1] for arg in sys.argv[1:] }
+    kwargs = {arg.split('=')[0]: arg.split('=')[1] for arg in sys.argv[1:]}
     service = getAudioFeatureService(track_ids=kwargs['track_ids'])
-    data = service.run(access_token=kwargs['access_token'])    
-    pprint('\n', data)
+    data = service.run(access_token=kwargs['access_token'])
 
+    # writing to raw datastore
+    io = IO()
+    io.write(
+        '../rawDataStore/tracks_features.orc',
+        rows=data,
+        schema="struct<acousticness:float,analysis_url:string,danceability:float,energy:float,id:string,instrumentalness:float,key:float,liveness:float,loudness:float,mode:float,speechiness:float,tempo:float,time_signature:float,track_href:string,type:string,uri:string,valence:float>"
+    )
+    print("Finished!")
