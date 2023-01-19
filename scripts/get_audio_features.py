@@ -1,6 +1,7 @@
 import os
 import sys
 from pprint import pprint
+from write_to_orc import IO
 
 
 class getAudioFeatureService:
@@ -23,6 +24,14 @@ class getAudioFeatureService:
 
 
 if __name__ == '__main__':
-    service = getAudioFeatureService('...')
-    data = service.run(access_token='BQBrYrSYA03Pi-7tPGioJy8BESMiWm2Lfhx_ov-iH8w5JHlpH08y6FFiNvdnzXNqBXlQA7qmkuDvVu1dRMAit1XowRDgb3Penq_vrhelFJdbeOOer8HRpGEtYeR9Vryx4WoW01gRh632Q6YBbR3Xj7E96K_Dw-EN06pUdtk8_3Da0DeelUlaG1FaRVD_AvVyg9s')
+    """
+    required commandline args : 
+    Example : python get_audio_features.py track_ids=./track_ids.orc store=./track_features.orc access_token=BQBaeCzbfTIY0npFsW3c36WYznmXab0ChptOEC1pKczRTkWIg3-hCmSmqVxUx3ZK4NgKtA6Z88U9ie2yPHjmOpIf9rJ21YJ75j9N9nxO9yEnZtc-JEt2YWZSVqZyRyocsOBnUtclVykxwoAereqVlUH3ZvwXtGSEWR6o5ZGmCC7Z485h2W1_iqYAMwFY8qCxlss
+
+    """
+    kwargs = { arg.split('=')[0]:arg.split('=')[1] for arg in sys.argv[1:] }
+    service = getAudioFeatureService(track_ids=kwargs['track_ids'])
+    data = service.run(access_token=kwargs['access_token'])    
     pprint(data)
+    
+
