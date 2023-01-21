@@ -2,6 +2,10 @@ import pyorc
 
 
 class IO:
+    """
+    ORC IO helpers.
+    """
+
     def write(self, path: str, rows, schema) -> bool:
         with open(path, mode='wb') as file:
             with pyorc.Writer(file, schema=schema,

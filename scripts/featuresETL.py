@@ -36,7 +36,7 @@ class getAudioFeatureService:
 if __name__ == '__main__':
     """
     required commandline args : 
-    Example : python get_audio_features.py track_ids=./track_ids.orc store=./track_features.orc access_token=BQBaeCzbfTIY0npFsW3c36WYznmXab0ChptOEC1pKczRTkWIg3-hCmSmqVxUx3ZK4NgKtA6Z88U9ie2yPHjmOpIf9rJ21YJ75j9N9nxO9yEnZtc-JEt2YWZSVqZyRyocsOBnUtclVykxwoAereqVlUH3ZvwXtGSEWR6o5ZGmCC7Z485h2W1_iqYAMwFY8qCxlss
+    Example : python featuresETL.py source=./track_ids.orc dest=./track_features.orc access_token=BQBaeCzbfTIY0npFsW3c36WYznmXab0ChptOEC1pKczRTkWIg3-hCmSmqVxUx3ZK4NgKtA6Z88U9ie2yPHjmOpIf9rJ21YJ75j9N9nxO9yEnZtc-JEt2YWZSVqZyRyocsOBnUtclVykxwoAereqVlUH3ZvwXtGSEWR6o5ZGmCC7Z485h2W1_iqYAMwFY8qCxlss
 
     """
     kwargs = {arg.split('=')[0]: arg.split('=')[1] for arg in sys.argv[1:]}
@@ -46,7 +46,7 @@ if __name__ == '__main__':
     # writing to raw datastore
     io = IO()
     io.write(
-        '../rawDataStore/tracks_features.orc',
+        path='../rawDataStore/tracks_features.orc',
         rows=data,
         schema="struct<acousticness:float,analysis_url:string,danceability:float,energy:float,id:string,instrumentalness:float,key:float,liveness:float,loudness:float,mode:float,speechiness:float,tempo:float,time_signature:float,track_href:string,type:string,uri:string,valence:float>"
     )
