@@ -1,0 +1,165 @@
+{
+  "href" : "https://api.spotify.com/v1/albums/0RwZL6Vt80dGICYl7TbUxP/tracks?offset=0&limit=50&market=ES",
+  "items" : [ {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4YRxDV8wJFPHPTeXepOstw"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4YRxDV8wJFPHPTeXepOstw",
+      "id" : "4YRxDV8wJFPHPTeXepOstw",
+      "name" : "Arijit Singh",
+      "type" : "artist",
+      "uri" : "spotify:artist:4YRxDV8wJFPHPTeXepOstw"
+    } ],
+    "disc_number" : 1,
+    "duration_ms" : 373394,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/3M1LUmP0pfXW9UMIkdWZuz"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/3M1LUmP0pfXW9UMIkdWZuz",
+    "id" : "3M1LUmP0pfXW9UMIkdWZuz",
+    "is_local" : false,
+    "is_playable" : true,
+    "name" : "Ami Achi",
+    "preview_url" : "https://p.scdn.co/mp3-preview/0b5e574455b454ba379b68dccab39a60dff5c484?cid=774b29d4f13844c495f206cafdad9c86",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:3M1LUmP0pfXW9UMIkdWZuz"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4YRxDV8wJFPHPTeXepOstw"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4YRxDV8wJFPHPTeXepOstw",
+      "id" : "4YRxDV8wJFPHPTeXepOstw",
+      "name" : "Arijit Singh",
+      "type" : "artist",
+      "uri" : "spotify:artist:4YRxDV8wJFPHPTeXepOstw"
+    } ],
+    "disc_number" : 1,
+    "duration_ms" : 331990,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6KWILjF5RRGYrokQNX9hDe"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6KWILjF5RRGYrokQNX9hDe",
+    "id" : "6KWILjF5RRGYrokQNX9hDe",
+    "is_local" : false,
+    "is_playable" : true,
+    "name" : "Somoyer Mon Nei",
+    "preview_url" : "https://p.scdn.co/mp3-preview/c1db7dfb5784f3c5fa819e1a46d63cc2cbb39356?cid=774b29d4f13844c495f206cafdad9c86",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:6KWILjF5RRGYrokQNX9hDe"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/64d388DtwMWbxAVkAB21A4"
+      },
+      "href" : "https://api.spotify.com/v1/artists/64d388DtwMWbxAVkAB21A4",
+      "id" : "64d388DtwMWbxAVkAB21A4",
+      "name" : "Indraadip Dasgupta",
+      "type" : "artist",
+      "uri" : "spotify:artist:64d388DtwMWbxAVkAB21A4"
+    } ],
+    "disc_number" : 1,
+    "duration_ms" : 325093,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6nkRZE5GHgCzk44dHoG0CD"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6nkRZE5GHgCzk44dHoG0CD",
+    "id" : "6nkRZE5GHgCzk44dHoG0CD",
+    "is_local" : false,
+    "is_playable" : true,
+    "name" : "Muthoy Aaj",
+    "preview_url" : "https://p.scdn.co/mp3-preview/d3127ef7576068eaafdc3a5ebd890b2065b80258?cid=774b29d4f13844c495f206cafdad9c86",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:6nkRZE5GHgCzk44dHoG0CD"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4odpqQRBLA3SfFUfIikW5q"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4odpqQRBLA3SfFUfIikW5q",
+      "id" : "4odpqQRBLA3SfFUfIikW5q",
+      "name" : "Arnob",
+      "type" : "artist",
+      "uri" : "spotify:artist:4odpqQRBLA3SfFUfIikW5q"
+    } ],
+    "disc_number" : 1,
+    "duration_ms" : 324806,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6PsDUXKPE5I4HT4wOWvLMn"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6PsDUXKPE5I4HT4wOWvLMn",
+    "id" : "6PsDUXKPE5I4HT4wOWvLMn",
+    "is_local" : false,
+    "is_playable" : true,
+    "name" : "Muthoy Aaj - Reprise",
+    "preview_url" : "https://p.scdn.co/mp3-preview/06493426f8a145f52d0cc15b54cc64c793f060e0?cid=774b29d4f13844c495f206cafdad9c86",
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:6PsDUXKPE5I4HT4wOWvLMn"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4YRxDV8wJFPHPTeXepOstw"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4YRxDV8wJFPHPTeXepOstw",
+      "id" : "4YRxDV8wJFPHPTeXepOstw",
+      "name" : "Arijit Singh",
+      "type" : "artist",
+      "uri" : "spotify:artist:4YRxDV8wJFPHPTeXepOstw"
+    } ],
+    "disc_number" : 1,
+    "duration_ms" : 316316,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4SstKKVPg4lNkAsWmJTMuX"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4SstKKVPg4lNkAsWmJTMuX",
+    "id" : "4SstKKVPg4lNkAsWmJTMuX",
+    "is_local" : false,
+    "is_playable" : true,
+    "name" : "Asatoma Sadgamaya",
+    "preview_url" : "https://p.scdn.co/mp3-preview/dc5ffd5c0a5bf10f31c9c9c8132c1edb08215f57?cid=774b29d4f13844c495f206cafdad9c86",
+    "track_number" : 5,
+    "type" : "track",
+    "uri" : "spotify:track:4SstKKVPg4lNkAsWmJTMuX"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0wMmGaXRfdHPhqSEAVQIr6"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0wMmGaXRfdHPhqSEAVQIr6",
+      "id" : "0wMmGaXRfdHPhqSEAVQIr6",
+      "name" : "Instrumental",
+      "type" : "artist",
+      "uri" : "spotify:artist:0wMmGaXRfdHPhqSEAVQIr6"
+    } ],
+    "disc_number" : 1,
+    "duration_ms" : 146677,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0JR797q0NXizifClbZL7Ui"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0JR797q0NXizifClbZL7Ui",
+    "id" : "0JR797q0NXizifClbZL7Ui",
+    "is_local" : false,
+    "is_playable" : true,
+    "name" : "Khaad Theme",
+    "preview_url" : "https://p.scdn.co/mp3-preview/80196e180077a1910cf5b17c34ee15be7a38745f?cid=774b29d4f13844c495f206cafdad9c86",
+    "track_number" : 6,
+    "type" : "track",
+    "uri" : "spotify:track:0JR797q0NXizifClbZL7Ui"
+  } ],
+  "limit" : 50,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 6
+}
