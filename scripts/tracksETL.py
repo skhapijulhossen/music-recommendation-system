@@ -1,7 +1,7 @@
 import json
 import sys
 from orcIO import IO
-
+import config
 
 class TracksPipeline:
     """
@@ -46,9 +46,8 @@ class TracksPipeline:
 if __name__ == '__main__':
     """
     required commandline args : 
-    Example : python tracksETL.py source=../albumStore/ArijitSingh_album11.json dest=../rawDataStore/tracksDB.orc
+    Example : python tracksETL.py
 
     """
-    kwargs = {arg.split('=')[0]: arg.split('=')[1] for arg in sys.argv[1:]}
-    pipeline = TracksPipeline(source=kwargs['source'])
-    pipeline.run(destination=kwargs['dest'])
+    pipeline = TracksPipeline(source=config.track_json_store)
+    pipeline.run(destination=config.tracks_data_store)
