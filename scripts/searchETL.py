@@ -41,6 +41,7 @@ class searchArtist:
         )
         artist_ids = ','.join(artist_ids)
         with open(config.artist_id_store, mode='w') as file:
+            file.write(',')
             file.write(artist_ids)
 
 
